@@ -1,4 +1,6 @@
-﻿namespace Solutions;
+﻿using System.Collections;
+
+namespace Solutions;
 
 public class Solution
 {
@@ -10,6 +12,28 @@ public class Solution
         ValidateParams(nums, target);
 #endif
 
+        var hashs = new Hashtable();
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            hashs.Add(i, nums[i]);
+        }
+
+        for (int i = 0; i < hashs.Count; i++)
+        {
+            for (int j = 0; j < hashs.Count; j++)
+            {
+                if (i == j)
+                    continue;
+
+                if ((int)hashs[i] + (int)hashs[j] == target)
+                    return new int[] { i, j };
+            }
+        }
+
+        return Array.Empty<int>();
+
+        /*
         for (int i = 0; i < nums.Length; i++)
         {
             for (int j = 0; j < nums.Length; j++)
@@ -23,6 +47,7 @@ public class Solution
         }
 
         return Array.Empty<int>();
+        */
     }
 
     private static void ValidateParams(int[] nums, int target)
