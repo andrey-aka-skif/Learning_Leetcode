@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace Solutions;
+﻿namespace Solutions;
 
 public class Solution
 {
@@ -16,19 +14,20 @@ public class Solution
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (hash.ContainsKey(nums[i]))
-                hash[nums[i]] = i;
-            else
-                hash.Add(nums[i], i);
-        }
-
-        for (int i = 0; i < nums.Length; i++)
-        {
             int complement = target - nums[i];
 
-            if (hash.ContainsKey(complement) && hash[complement] != i)
+            if (hash.ContainsKey(complement))
             {
                 return new int[] { i, hash[complement] };
+            }
+
+            if (hash.ContainsKey(nums[i]))
+            {
+                hash[nums[i]] = i;
+            }
+            else
+            {
+                hash.Add(nums[i], i);
             }
         }
 
