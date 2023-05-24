@@ -12,42 +12,27 @@ public class Solution
         ValidateParams(nums, target);
 #endif
 
-        var hashs = new Hashtable();
+        var hash = new Dictionary<int, int>();
 
         for (int i = 0; i < nums.Length; i++)
         {
-            hashs.Add(i, nums[i]);
+            if (hash.ContainsKey(nums[i]))
+                hash[nums[i]] = i;
+            else
+                hash.Add(nums[i], i);
         }
 
-        for (int i = 0; i < hashs.Count; i++)
-        {
-            for (int j = 0; j < hashs.Count; j++)
-            {
-                if (i == j)
-                    continue;
-
-                if ((int)hashs[i] + (int)hashs[j] == target)
-                    return new int[] { i, j };
-            }
-        }
-
-        return Array.Empty<int>();
-
-        /*
         for (int i = 0; i < nums.Length; i++)
         {
-            for (int j = 0; j < nums.Length; j++)
-            {
-                if (i == j)
-                    continue;
+            int complement = target - nums[i];
 
-                if (nums[i] + nums[j] == target)
-                    return new int[] { i, j };
+            if (hash.ContainsKey(complement) && hash[complement] != i)
+            {
+                return new int[] { i, hash[complement] };
             }
         }
 
-        return Array.Empty<int>();
-        */
+        return null!;
     }
 
     private static void ValidateParams(int[] nums, int target)
