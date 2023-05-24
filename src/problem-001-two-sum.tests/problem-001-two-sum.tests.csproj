@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\001-two-sum\problem-001-two-sum.csproj" />
     <ProjectReference Include="..\problem-001-two-sum\problem-001-two-sum.csproj" />
   </ItemGroup>
 
