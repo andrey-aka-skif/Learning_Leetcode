@@ -1,4 +1,4 @@
-﻿using Solutions;
+﻿using problem_001_two_sum;
 
 var nums = new int[] { 3, 3 };
 var target = 6;
