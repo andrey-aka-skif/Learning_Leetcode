@@ -16,13 +16,13 @@ public class ListNodeFactory
         return current!;
     }
 
-    internal static ListNode CreateFromInt(int value)
+    internal static ListNode CreateFromLong(long value)
     {
-        var result = CreateArrayFromInt(value);
+        var result = CreateArrayFromLong(value);
         return CreateFromArray(result);
     }
 
-    internal static int[] CreateArrayFromInt(int value)
+    internal static int[] CreateArrayFromLong(long value)
     {
         if (value == 0)
             return new int[1];
@@ -30,7 +30,7 @@ public class ListNodeFactory
         var result = Array.Empty<int>();
         while (value > 0)
         {
-            int current = value % 10;
+            int current = (int)(value % 10);
             value /= 10;
             Array.Resize(ref result, result.Length + 1);
             result[^1] = current;

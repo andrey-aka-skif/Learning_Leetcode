@@ -19,7 +19,7 @@ public class ListNode
 
         var other = (ListNode)obj;
 
-        return this.ToInt() == other.ToInt();
+        return this.ToLong() == other.ToLong();
     }
 
     public override int GetHashCode()

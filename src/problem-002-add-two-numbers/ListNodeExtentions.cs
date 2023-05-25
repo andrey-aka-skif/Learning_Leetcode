@@ -2,9 +2,9 @@
 
 public static class ListNodeExtentions
 {
-    public static int ToInt(this ListNode node)
+    public static long ToLong(this ListNode node)
     {
-        int major = node.next != null ? node.next.ToInt() : 0;
-        return 10 * major + node.val;
+        long major = node.next != null ? node.next.ToLong() : 0;
+        return (10 * major) + node.val;
     }
 }

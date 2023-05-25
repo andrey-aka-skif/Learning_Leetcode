@@ -49,4 +49,36 @@ public class SolutionTest
         // Assert
         Assert.Equal(result, expected);
     }
+
+    [Fact]
+    public void Leetcode_Case4()
+    {
+        // Arrange
+        var l1 = ListNodeFactory.CreateFromArray(new int[] { 9 });
+        var l2 = ListNodeFactory.CreateFromArray(new int[] { 1, 9, 9, 9, 9, 9, 9, 9, 9, 9 });
+        var expected = ListNodeFactory.CreateFromArray(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 });
+
+        // Act
+        var solution = new Solution();
+        var result = solution.AddTwoNumbers(l1, l2);
+
+        // Assert
+        Assert.Equal(result, expected);
+    }
+
+    [Fact]
+    public void Leetcode_Case5()
+    {
+        // Arrange
+        var l1 = ListNodeFactory.CreateFromArray(new int[] { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 });
+        var l2 = ListNodeFactory.CreateFromArray(new int[] { 5, 6, 4 });
+        var expected = ListNodeFactory.CreateFromArray(new int[] { 6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 });
+
+        // Act
+        var solution = new Solution();
+        var result = solution.AddTwoNumbers(l1, l2);
+
+        // Assert
+        Assert.Equal(result, expected);
+    }
 }
