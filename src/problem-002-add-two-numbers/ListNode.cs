@@ -1,19 +1,15 @@
-﻿namespace problem_002_add_two_numbers;
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace problem_002_add_two_numbers;
 
 public class ListNode
 {
-    public int Val { get; set; }
-    public ListNode? Next { get; set; }
+    public int val { get; set; }
+    public ListNode? next { get; set; }
     public ListNode(int val = 0, ListNode? next = null)
     {
-        Val = val;
-        Next = next;
-    }
-
-    public int ToInt()
-    {
-        int major = Next != null ? Next.ToInt() : 0;
-        return 10 * major + Val;
+        this.val = val;
+        this.next = next;
     }
 
     public override bool Equals(object? obj)
@@ -23,14 +19,14 @@ public class ListNode
 
         var other = (ListNode)obj;
 
-        return ToInt() == other.ToInt();
+        return this.ToInt() == other.ToInt();
     }
 
     public override int GetHashCode()
     {
-        if (Next != null)
-            return HashCode.Combine(Val, Next.GetHashCode());
+        if (next != null)
+            return HashCode.Combine(val, next.GetHashCode());
         else
-            return HashCode.Combine(Val);
+            return HashCode.Combine(val);
     }
 }
