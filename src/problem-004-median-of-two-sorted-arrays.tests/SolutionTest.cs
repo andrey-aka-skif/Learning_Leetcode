@@ -33,4 +33,20 @@ public class SolutionTest
         // Assert
         Assert.Equal(result, expected);
     }
+
+    [Fact]
+    public void Leetcode_Case3()
+    {
+        // Arrange
+        var nums1 = new int[] { };
+        var nums2 = new int[] { 2, 3 };
+        var expected = 2.5d;
+
+        // Act
+        var solution = new Solution();
+        var result = solution.FindMedianSortedArrays(nums1, nums2);
+
+        // Assert
+        Assert.Equal(result, expected);
+    }
 }

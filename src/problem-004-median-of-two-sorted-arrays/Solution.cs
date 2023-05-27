@@ -5,10 +5,40 @@ public class Solution
     public double FindMedianSortedArrays(int[] nums1, int[] nums2)
     {
         int[] newArray = new int[nums1.Length + nums2.Length];
-        Array.Copy(nums1, newArray, nums1.Length);
-        Array.Copy(nums2, 0, newArray, nums1.Length, nums2.Length);
 
-        Array.Sort(newArray);
+        int i1 = 0;
+        int i2 = 0;
+
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            if (i1 >= nums1.Length)
+            {
+                newArray[i] = nums2[i2];
+                i2++;
+                continue;
+            }
+
+            if (i2 >= nums2.Length)
+            {
+                newArray[i] = nums1[i1];
+                i1++;
+                continue;
+            }
+
+            if (nums1[i1] < nums2[i2])
+            {
+                newArray[i] = nums1[i1];
+                i1++;
+                continue;
+            }
+
+            if (nums1[i1] >= nums2[i2])
+            {
+                newArray[i] = nums2[i2];
+                i2++;
+                continue;
+            }
+        }
 
         bool isEven = newArray.Length % 2 == 0;
 
