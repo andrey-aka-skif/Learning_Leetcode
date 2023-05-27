@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "problem-001-two-sum.tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "problem-001-two-sum", "problem-001-two-sum\problem-001-two-sum.csproj", "{6FBC434F-D37F-4934-AD54-8C58E20D00D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "problem-002-add-two-numbers", "problem-002-add-two-numbers\problem-002-add-two-numbers.csproj", "{C5D9B65C-4471-4D21-B371-47C9B62C3728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "problem-002-add-two-numbers", "problem-002-add-two-numbers\problem-002-add-two-numbers.csproj", "{C5D9B65C-4471-4D21-B371-47C9B62C3728}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "problem-002-add-two-numbers.tests", "problem-002-add-two-numbers.tests\problem-002-add-two-numbers.tests.csproj", "{9CBD6DEF-6E15-4F0C-87E2-A42BF06056CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "problem-002-add-two-numbers.tests", "problem-002-add-two-numbers.tests\problem-002-add-two-numbers.tests.csproj", "{9CBD6DEF-6E15-4F0C-87E2-A42BF06056CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "problem-004-median-of-two-sorted-arrays", "problem-004-median-of-two-sorted-arrays\problem-004-median-of-two-sorted-arrays.csproj", "{CC766235-8D7F-4218-9561-6B3EB9A480C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "problem-004-median-of-two-sorted-arrays.tests", "problem-004-median-of-two-sorted-arrays.tests\problem-004-median-of-two-sorted-arrays.tests.csproj", "{5DACE3CA-51DE-4590-9A4D-72A9CC593C07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{9CBD6DEF-6E15-4F0C-87E2-A42BF06056CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CBD6DEF-6E15-4F0C-87E2-A42BF06056CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CBD6DEF-6E15-4F0C-87E2-A42BF06056CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC766235-8D7F-4218-9561-6B3EB9A480C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC766235-8D7F-4218-9561-6B3EB9A480C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC766235-8D7F-4218-9561-6B3EB9A480C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC766235-8D7F-4218-9561-6B3EB9A480C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DACE3CA-51DE-4590-9A4D-72A9CC593C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DACE3CA-51DE-4590-9A4D-72A9CC593C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DACE3CA-51DE-4590-9A4D-72A9CC593C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DACE3CA-51DE-4590-9A4D-72A9CC593C07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
